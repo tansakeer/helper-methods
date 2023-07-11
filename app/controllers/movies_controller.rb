@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
       end
 
       format.html
-      end
+    
     end
   end
 
@@ -70,4 +70,5 @@ class MoviesController < ApplicationController
 
     redirect_to movies_url, notice: "Movie deleted successfully." 
   end
+
 end
