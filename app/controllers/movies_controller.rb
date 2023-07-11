@@ -33,9 +33,9 @@ class MoviesController < ApplicationController
 
     if @the_movie.valid?
       @the_movie.save
-      redirect_to movie_url, notice: "Movie created successfully."
+      redirect_to movies_url, notice: "Movie created successfully."
     else
-      render template: "new"
+      render template: "movies/new.html.erb"
     end
   end
 
@@ -56,9 +56,9 @@ class MoviesController < ApplicationController
 
     if the_movie.valid?
       the_movie.save
-      redirect_to movie_url(the_movie), notice: "Movie updated successfully."
+      redirect_to movies_url(the_movie), notice: "Movie updated successfully."
     else
-      redirect_to movie_url(the_movie), alert: "Movie failed to update successfully." 
+      redirect_to movies_url(the_movie), alert: "Movie failed to update successfully." 
     end
   end
 
